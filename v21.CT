@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="42">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>79</ID>
+      <Description>"血量"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"UnityPlayer.dll"+019E2AE8</Address>
+      <Offsets>
+        <Offset>D0</Offset>
+        <Offset>38</Offset>
+        <Offset>0</Offset>
+        <Offset>0</Offset>
+        <Offset>1C8</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>80</ID>
+      <Description>"指针扫描结果"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"UnityPlayer.dll"+019E2AE8</Address>
+      <Offsets>
+        <Offset>D8</Offset>
+        <Offset>38</Offset>
+        <Offset>0</Offset>
+        <Offset>0</Offset>
+        <Offset>1C8</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>48</ID>
+      <Description>"坐标x"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>"UnityPlayer.dll"+01A259E8</Address>
+      <Offsets>
+        <Offset>2C</Offset>
+        <Offset>60</Offset>
+        <Offset>48</Offset>
+        <Offset>608</Offset>
+        <Offset>48</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>49</ID>
+      <Description>"坐标y"</Description>
+      <VariableType>Float</VariableType>
+      <Address>"UnityPlayer.dll"+01A259E8</Address>
+      <Offsets>
+        <Offset>30</Offset>
+        <Offset>60</Offset>
+        <Offset>48</Offset>
+        <Offset>608</Offset>
+        <Offset>48</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>93</ID>
+      <Description>"钱"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"UnityPlayer.dll"+019BB548</Address>
+      <Offsets>
+        <Offset>30</Offset>
+        <Offset>60</Offset>
+        <Offset>8</Offset>
+        <Offset>D0</Offset>
+        <Offset>8</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>51</ID>
+      <Description>"无视荆棘(被荆棘扣一次血之后再开)"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+aobscan(INJECT,55 48 8B EC 48 81 EC 80 02 00 00 48 89 5D C8 48 89 75 D0 48 89 7D D8 4C 89 65 E0 4C 89 6D E8 4C 89 75 F0 4C 89) // should be unique
+alloc(newmem,$1000,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+  ret
+
+code:
+
+  push rbp
+  mov rbp,rsp
+  sub rsp,00000150
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 6
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+INJECT:
+  db 55 48 8B EC 48 81 EC 80 02 00 00 48 89 5D C8 48 89 75 D0 48 89 7D D8 4C 89 65 E0 4C 89 6D E8 4C 89 75 F0 4C 89
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>15</ID>
+      <Description>"备用基址"</Description>
+      <Options moHideChildren="1" moManualExpandCollapse="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>94</ID>
+          <Description>"指针扫描结果"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"UnityPlayer.dll"+019BB548</Address>
+          <Offsets>
+            <Offset>30</Offset>
+            <Offset>60</Offset>
+            <Offset>8</Offset>
+            <Offset>D0</Offset>
+            <Offset>B8</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>95</ID>
+          <Description>"指针扫描结果"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"UnityPlayer.dll"+019BB548</Address>
+          <Offsets>
+            <Offset>30</Offset>
+            <Offset>60</Offset>
+            <Offset>8</Offset>
+            <Offset>D0</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>96</ID>
+          <Description>"指针扫描结果"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"UnityPlayer.dll"+019BB548</Address>
+          <Offsets>
+            <Offset>30</Offset>
+            <Offset>60</Offset>
+            <Offset>8</Offset>
+            <Offset>D0</Offset>
+            <Offset>A8</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>97</ID>
+          <Description>"指针扫描结果"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"UnityPlayer.dll"+019BB548</Address>
+          <Offsets>
+            <Offset>30</Offset>
+            <Offset>60</Offset>
+            <Offset>8</Offset>
+            <Offset>D0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>98</ID>
+          <Description>"指针扫描结果"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"mono-2.0-bdwgc.dll"+00498D00</Address>
+          <Offsets>
+            <Offset>1B0</Offset>
+            <Offset>2C0</Offset>
+            <Offset>0</Offset>
+            <Offset>C8</Offset>
+            <Offset>130</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>99</ID>
+          <Description>"指针扫描结果"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"mono-2.0-bdwgc.dll"+00498DE8</Address>
+          <Offsets>
+            <Offset>1B0</Offset>
+            <Offset>2C0</Offset>
+            <Offset>0</Offset>
+            <Offset>7D8</Offset>
+            <Offset>98</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>100</ID>
+          <Description>"指针扫描结果"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"mono-2.0-bdwgc.dll"+004A8440</Address>
+          <Offsets>
+            <Offset>1B0</Offset>
+            <Offset>2C0</Offset>
+            <Offset>0</Offset>
+            <Offset>7D8</Offset>
+            <Offset>298</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>101</ID>
+          <Description>"指针扫描结果"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"mono-2.0-bdwgc.dll"+004A8430</Address>
+          <Offsets>
+            <Offset>1B0</Offset>
+            <Offset>2C0</Offset>
+            <Offset>0</Offset>
+            <Offset>7D8</Offset>
+            <Offset>210</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>34</ID>
+          <Description>"指针扫描结果"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"UnityPlayer.dll"+01A259E8</Address>
+          <Offsets>
+            <Offset>30</Offset>
+            <Offset>60</Offset>
+            <Offset>48</Offset>
+            <Offset>608</Offset>
+            <Offset>48</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>35</ID>
+          <Description>"指针扫描结果"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"UnityPlayer.dll"+01A259E8</Address>
+          <Offsets>
+            <Offset>30</Offset>
+            <Offset>88</Offset>
+            <Offset>40</Offset>
+            <Offset>608</Offset>
+            <Offset>48</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>36</ID>
+          <Description>"指针扫描结果"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"UnityPlayer.dll"+01A259E8</Address>
+          <Offsets>
+            <Offset>30</Offset>
+            <Offset>88</Offset>
+            <Offset>8</Offset>
+            <Offset>370</Offset>
+            <Offset>48</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1</ID>
+          <Description>"自动汇编脚本"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+ 
+aobscan(INJECT,48 63 80 C8 00 00 00 85) // should be unique
+alloc(newmem,$1000,INJECT)
+registersymbol(DZZ)
+alloc(DZZ,8)
+label(code)
+label(return)
+
+newmem:
+
+code:
+  mov [DZZ],rax
+  movsxd  rax,dword ptr [rax+000000C8]
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 2
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 48 63 80 C8 00 00 00
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: 1BF125585FB
+
+1BF125585E2: 01 00                 - add [rax],eax
+1BF125585E4: 00 00                 - add [rax],al
+1BF125585E6: 00 00                 - add [rax],al
+1BF125585E8: 00 00                 - add [rax],al
+1BF125585EA: 00 00                 - add [rax],al
+1BF125585EC: 00 00                 - add [rax],al
+1BF125585EE: 00 00                 - add [rax],al
+1BF125585F0: 48 83 EC 08           - sub rsp,08
+1BF125585F4: 48 89 0C 24           - mov [rsp],rcx
+1BF125585F8: 48 8B C1              - mov rax,rcx
+// ---------- INJECTING HERE ----------
+1BF125585FB: 48 63 80 C8 00 00 00  - movsxd  rax,dword ptr [rax+000000C8]
+// ---------- DONE INJECTING  ----------
+1BF12558602: 85 C0                 - test eax,eax
+1BF12558604: 40 0F 9F C0           - setg al
+1BF12558608: 48 0F B6 C0           - movzx rax,al
+1BF1255860C: 48 83 C4 08           - add rsp,08
+1BF12558610: C3                    - ret 
+1BF12558611: 00 00                 - add [rax],al
+1BF12558613: 00 00                 - add [rax],al
+1BF12558615: 00 00                 - add [rax],al
+1BF12558617: 00 01                 - add [rcx],al
+1BF12558619: 04 01                 - add al,01
+}
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>102</ID>
+      <Description>"无描述"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>Array of byte</VariableType>
+      <ByteLength>44</ByteLength>
+      <Address>23B6113ADE0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>50</ID>
+      <Description>"无视虫墙(图内有虫墙再开)"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+aobscan(INJECT,55 48 8B EC 48 81 EC 40 01 00 00 48 89 5D C8 48 89 75 D0 48 89 7D D8 4C 89 65 E0 4C 89 6D E8 4C 89 75 F0 4C 89 7D F8 48 8B F1 33 C0) // should be unique
+alloc(newmem,$1000,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+  ret
+
+code:
+
+  push rbp
+  mov rbp,rsp
+  sub rsp,00000150
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 6
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+INJECT:
+  db 55 48 8B EC 48 81 EC 40 01 00 00 48 89 5D C8 48 89 75 D0 48 89 7D D8 4C 89 65 E0 4C 89 6D E8 4C 89 75 F0 4C 89 7D F8 48 8B F1 33 C0
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>替换了 mov rax,[rbx+30]</Description>
+      <AddressString>UnityPlayer.dll+BCCBE1</AddressString>
+      <Before>
+        <Byte>84</Byte>
+        <Byte>9E</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>48</Byte>
+        <Byte>8B</Byte>
+        <Byte>43</Byte>
+        <Byte>30</Byte>
+      </Actual>
+      <After>
+        <Byte>F2</Byte>
+        <Byte>41</Byte>
+        <Byte>0F</Byte>
+        <Byte>10</Byte>
+        <Byte>04</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>替换了 call UnityPlayer.dll+BCC6E0</Description>
+      <AddressString>UnityPlayer.dll+BCD1A0</AddressString>
+      <Before>
+        <Byte>48</Byte>
+        <Byte>8D</Byte>
+        <Byte>4C</Byte>
+        <Byte>24</Byte>
+        <Byte>20</Byte>
+      </Before>
+      <Actual>
+        <Byte>E8</Byte>
+        <Byte>3B</Byte>
+        <Byte>F5</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+      </Actual>
+      <After>
+        <Byte>FF</Byte>
+        <Byte>85</Byte>
+        <Byte>00</Byte>
+        <Byte>94</Byte>
+        <Byte>01</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>替换了 je UnityPlayer.dll+BCD0C0</Description>
+      <AddressString>UnityPlayer.dll+BCD067</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>48</Byte>
+        <Byte>85</Byte>
+        <Byte>C0</Byte>
+      </Before>
+      <Actual>
+        <Byte>74</Byte>
+        <Byte>57</Byte>
+      </Actual>
+      <After>
+        <Byte>0F</Byte>
+        <Byte>1F</Byte>
+        <Byte>80</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>替换了 movss [rbx+2C],xmm7</Description>
+      <AddressString>UnityPlayer.dll+BCC0AD</AddressString>
+      <Before>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>7B</Byte>
+        <Byte>24</Byte>
+      </Before>
+      <Actual>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>7B</Byte>
+        <Byte>2C</Byte>
+      </Actual>
+      <After>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>5C</Byte>
+        <Byte>FC</Byte>
+        <Byte>F3</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>替换了 call UnityPlayer.dll+BCAA30</Description>
+      <AddressString>UnityPlayer.dll+C30537</AddressString>
+      <Before>
+        <Byte>07</Byte>
+        <Byte>48</Byte>
+        <Byte>8B</Byte>
+        <Byte>48</Byte>
+        <Byte>08</Byte>
+      </Before>
+      <Actual>
+        <Byte>E8</Byte>
+        <Byte>F4</Byte>
+        <Byte>A4</Byte>
+        <Byte>F9</Byte>
+        <Byte>FF</Byte>
+      </Actual>
+      <After>
+        <Byte>48</Byte>
+        <Byte>8B</Byte>
+        <Byte>C8</Byte>
+        <Byte>48</Byte>
+        <Byte>89</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>替换了 call r11</Description>
+      <AddressString>2B7FA530C00</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>B8</Byte>
+        <Byte>02</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>41</Byte>
+        <Byte>FF</Byte>
+        <Byte>D3</Byte>
+      </Actual>
+      <After>
+        <Byte>C7</Byte>
+        <Byte>47</Byte>
+        <Byte>70</Byte>
+        <Byte>04</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>替换了 jb mono-2.0-bdwgc.GC_malloc_uncollectable+44B</Description>
+      <AddressString>mono-2.0-bdwgc.dll+311F48</AddressString>
+      <Before>
+        <Byte>24</Byte>
+        <Byte>20</Byte>
+        <Byte>49</Byte>
+        <Byte>3B</Byte>
+        <Byte>FC</Byte>
+      </Before>
+      <Actual>
+        <Byte>72</Byte>
+        <Byte>09</Byte>
+      </Actual>
+      <After>
+        <Byte>49</Byte>
+        <Byte>3B</Byte>
+        <Byte>FF</Byte>
+        <Byte>0F</Byte>
+        <Byte>82</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>替换了 jb mono-2.0-bdwgc.GC_malloc_uncollectable+474</Description>
+      <AddressString>mono-2.0-bdwgc.dll+311F71</AddressString>
+      <Before>
+        <Byte>24</Byte>
+        <Byte>20</Byte>
+        <Byte>49</Byte>
+        <Byte>3B</Byte>
+        <Byte>FC</Byte>
+      </Before>
+      <Actual>
+        <Byte>72</Byte>
+        <Byte>09</Byte>
+      </Actual>
+      <After>
+        <Byte>49</Byte>
+        <Byte>3B</Byte>
+        <Byte>FF</Byte>
+        <Byte>0F</Byte>
+        <Byte>82</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>替换了 jmp mono-2.0-bdwgc.GC_malloc_uncollectable+42B</Description>
+      <AddressString>mono-2.0-bdwgc.dll+311F85</AddressString>
+      <Before>
+        <Byte>87</Byte>
+        <Byte>81</Byte>
+        <Byte>04</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>EB</Byte>
+        <Byte>AC</Byte>
+      </Actual>
+      <After>
+        <Byte>48</Byte>
+        <Byte>83</Byte>
+        <Byte>EB</Byte>
+        <Byte>10</Byte>
+        <Byte>E9</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>替换了 call r11</Description>
+      <AddressString>1F3A9E8DAE0</AddressString>
+      <Before>
+        <Byte>A9</Byte>
+        <Byte>F3</Byte>
+        <Byte>01</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>41</Byte>
+        <Byte>FF</Byte>
+        <Byte>D3</Byte>
+      </Actual>
+      <After>
+        <Byte>48</Byte>
+        <Byte>8B</Byte>
+        <Byte>87</Byte>
+        <Byte>08</Byte>
+        <Byte>02</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>替换了 call qword ptr [rax+000003A8]</Description>
+      <AddressString>1F3A9E8CDF5</AddressString>
+      <Before>
+        <Byte>8B</Byte>
+        <Byte>CF</Byte>
+        <Byte>49</Byte>
+        <Byte>8B</Byte>
+        <Byte>07</Byte>
+      </Before>
+      <Actual>
+        <Byte>FF</Byte>
+        <Byte>90</Byte>
+        <Byte>A8</Byte>
+        <Byte>03</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>48</Byte>
+        <Byte>63</Byte>
+        <Byte>85</Byte>
+        <Byte>68</Byte>
+        <Byte>FF</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>替换了 call r11</Description>
+      <AddressString>21054DDB570</AddressString>
+      <Before>
+        <Byte>54</Byte>
+        <Byte>10</Byte>
+        <Byte>02</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>41</Byte>
+        <Byte>FF</Byte>
+        <Byte>D3</Byte>
+      </Actual>
+      <After>
+        <Byte>85</Byte>
+        <Byte>C0</Byte>
+        <Byte>0F</Byte>
+        <Byte>85</Byte>
+        <Byte>28</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>替换了 call r11</Description>
+      <AddressString>17ECE080C00</AddressString>
+      <Before>
+        <Byte>CE</Byte>
+        <Byte>7E</Byte>
+        <Byte>01</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>41</Byte>
+        <Byte>FF</Byte>
+        <Byte>D3</Byte>
+      </Actual>
+      <After>
+        <Byte>48</Byte>
+        <Byte>8B</Byte>
+        <Byte>87</Byte>
+        <Byte>08</Byte>
+        <Byte>02</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols/>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>12696600000</Address>
+      <Comment>无视虫墙
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>1B2458E1442</Address>
+      <Comment>定位
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>1B24B1BC8DB</Address>
+      <Comment>111111111111
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>1CEAEFD2778</Address>
+      <Comment>收到伤害call
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>1CEAEFD80F0</Address>
+      <Comment>扣血call
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>1CEAEFD8533</Address>
+      <Comment>血量减少
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>1DDB3283600</Address>
+      <Comment>这一行改成ret
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>1F373CF6310</Address>
+      <Comment>坐椅子
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>1F3A9E8DAE0</Address>
+      <Comment>回血
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>20A743B4ED0</Address>
+      <Comment>这里改成ret
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>243CD9AE0A8</Address>
+      <Comment>!
+1223123
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>246BB028A90</Address>
+      <Comment>33333333333
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>246BB02EE58</Address>
+      <Comment>222222222222222
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>246BFF33E80</Address>
+      <Comment>111111111111
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>246BFF90060</Address>
+      <Comment>44444444444
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>27746805D90</Address>
+      <Comment>3333333333333333
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>27746805E98</Address>
+      <Comment>1111111111111
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>277468607A0</Address>
+      <Comment>5555555555555
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>27746AE86E8</Address>
+      <Comment>444444444444444
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>27746AE9288</Address>
+      <Comment>22222222222222222222222
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>27762675A6B</Address>
+      <Comment>111111123123
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>28C467DB7E0</Address>
+      <Comment>憋气去世
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>28C467DCBC8</Address>
+      <Comment>1111111111111111
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>28C467DCC40</Address>
+      <Comment>显示黑框
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"UnityPlayer.dll"+BCCD80</Address>
+      <Comment>判断下落状态
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"UnityPlayer.dll"+BCD1A0</Address>
+      <Comment>114514
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>
