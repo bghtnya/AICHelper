@@ -2,7 +2,8 @@
 当前版本：1.3
 
 ## 界面
-![image](https://github.com/user-attachments/assets/aedf36f1-80a4-40be-bf01-b35a1d0b41c4)
+![image](https://github.com/user-attachments/assets/c8448993-2427-49ae-8c7b-4a477f03315e)
+
 ![image](https://github.com/user-attachments/assets/394c4c07-8b65-44b1-a7c0-e87ff8f3a14c)
 
 
