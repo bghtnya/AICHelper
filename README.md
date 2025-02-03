@@ -70,7 +70,7 @@ F7调试菜单需要同时打开日志与时间戳功能 可以在辅助工具�
 ct表的使用需要先下载安装Cheat Engine, 导入ct文件 然后附加游戏进程,注意部分功能需要在附加游戏后从ce菜单中激活mono功能才能获取到函数地址
 
 具体教程见 B 站视频：
-- 【开源 AICHelper / AliceInCradle辅助工具v1.3 附ct表】 (https://www.bilibili.com/video/BV18pPdegEeu/)
+- [【开源 AICHelper / AliceInCradle辅助工具v1.3 附ct表】](https://www.bilibili.com/video/BV18pPdegEeu/)
 - [【【开源】AliceInCradle 辅助工具 v1.1 新增 debug 调试支持](https://www.bilibili.com/video/BV1SY41197J6/)
 - [【AliceInCradle 辅助工具(附 CT 表)】](https://www.bilibili.com/video/BV1vP4y197x9/)
 
