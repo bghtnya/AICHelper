@@ -1,5 +1,5 @@
 # AICHelper / AliceInCradle辅助工具 / ct表
-当前版本：1.3
+当前版本：1.4
 
 ## 界面
 ![image](https://github.com/user-attachments/assets/c8448993-2427-49ae-8c7b-4a477f03315e)
@@ -9,6 +9,9 @@
 
 
 ## 更新日志
+### 1.4
+- 更新版本支持到v28i
+
 
 ### 1.3
 - 优化空间布局，修复部分内存操作问题
