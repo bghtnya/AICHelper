@@ -1,4 +1,5 @@
-因为之前github号被两步验证搞没了所以换了个号fork了一遍仓库更新
+因为之前github号被两步验证搞没了所以换了个号fork了一遍仓库更新 \
+旧仓库地址：https://github.com/bghta666/AICHelper
 
 # AICHelper / AliceInCradle辅助工具 / ct表
 当前版本：1.4
